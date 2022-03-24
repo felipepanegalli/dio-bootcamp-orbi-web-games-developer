@@ -1,12 +1,12 @@
 # Órbi Web Games Developer
 
+<div align="center">
+
+<img src="https://hermes.digitalinnovation.one/tracks/5a0ef2bf-8cca-4be7-b506-3945fbb8f1d4.png" width="300" alt="Escudo roxo e azul do bootcamp da orbi games">
+
 Repositório dedicado para os projetos desenvolvidos no bootcamp de Órbi no ano de 2022.
 
 <br>
-
-
-
-<div align="center">
 
 ## Hi there 👋, I'm Felipe Panegalli 👦🏻
 
