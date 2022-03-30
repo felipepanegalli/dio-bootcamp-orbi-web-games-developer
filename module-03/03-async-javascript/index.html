@@ -66,12 +66,16 @@
 
     <script>
         const changeCatImage = async () => {
-            const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
-            let res = await fetch(BASE_URL);
-            res = await res.json();
+            try {
+                const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
+                const img = document.getElementById('img');
 
-            const img = document.getElementById('img');
-            img.src = res.url;
+                let res = await fetch(BASE_URL);
+                res = await res.json();
+                img.src = res.url;
+            } catch (error) {
+                console.log(error);
+            }
         }
 
         changeCatImage();
