@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript assíncrono</title>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Apenas.... Gatos!!</h2>
+        <img src="" id="img" alt="Imagens aleatórias de gatinhos">
+        <button onclick="changeCatImage()">Sortear gatinho</button>
+    </div>
+
+    <style>
+        body {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #7F7FD5;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .content {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content img {
+            width: 500px;
+            height: 500px;
+            margin: 1rem 0;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            object-fit: cover;
+        }
+
+        .content button {
+            width: fit-content;
+            padding: 10px 40px;
+            border: none;
+            background-color: #3498db;
+            cursor: pointer;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+
+        .content button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+
+    <script>
+        const changeCatImage = async () => {
+            const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
+            let res = await fetch(BASE_URL);
+            res = await res.json();
+
+            const img = document.getElementById('img');
+            img.src = res.url;
+        }
+
+        changeCatImage();
+
+    </script>
+</body>
+
+</html>
