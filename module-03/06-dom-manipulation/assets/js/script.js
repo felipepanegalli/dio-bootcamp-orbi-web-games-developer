@@ -9,7 +9,11 @@ button.addEventListener("click", function () {
   body.classList.toggle("dark-mode");
   this.classList.toggle("dark-mode");
 
-  h1.classList.contains("dark-mode")
-    ? (h1.innerHTML = "Light Mode OFF")
-    : (h1.innerHTML = "Light Mode ON");
+  if (h1.classList.contains("dark-mode")) {
+    h1.innerHTML = "Dark Mode ON";
+    button.innerHTML = "Light Mode";
+} else {
+    h1.innerHTML = "Light Mode ON";
+    button.innerHTML = "Dark Mode";
+  }
 });
