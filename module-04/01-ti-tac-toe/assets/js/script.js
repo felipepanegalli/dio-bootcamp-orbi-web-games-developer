@@ -88,11 +88,14 @@ const changeWinner = (square) => {
 };
 
 const changeSquareColor = (l1, l2, l3) => {
-  l1.style.backgroundColor = "#0f0";
+  l1.style.backgroundColor = "#2ecc71";
+  l1.style.borderColor = "#27ae60";
   l1.style.color = "#fff";
-  l2.style.backgroundColor = "#0f0";
+  l2.style.backgroundColor = "#2ecc71";
+  l2.style.borderColor = "#27ae60";
   l2.style.color = "#fff";
-  l3.style.backgroundColor = "#0f0";
+  l3.style.backgroundColor = "#2ecc71";
+  l3.style.borderColor = "#27ae60";
   l3.style.color = "#fff";
 };
 
@@ -116,8 +119,9 @@ const restart = () => {
   changePlayer("X");
   for (let i = 1; i <= 9; i++) {
     let square = document.getElementById(i);
-    square.style.backgroundColor = "#CCC";
-    square.style.color = "#CCC";
+    square.style.backgroundColor = "#ecf0f1";
+    square.style.borderColor = "#bdc3c7";
+    square.style.color = "#ecf0f1";
     square.innerHTML = "-";
   }
 };
