@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-color: rgb(226, 236, 255);
+}
+
+.main-game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas:
+        "green red"
+        "yellow blue";
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px;
+}
+
+.blue {
+    background-color: #0fbcf9;
+    grid-area: blue;
+    border-bottom-right-radius: 100%;
+    cursor: pointer;
+}
+
+.blue:hover {
+    background-color: #0893c5;
+}
+
+.blue:active {
+    opacity: 0.5;
+}
+
+.yellow {
+    background-color: #ffd32a;
+    grid-area: yellow;
+    border-bottom-left-radius: 100%;
+    cursor: pointer;
+}
+
+.yellow:hover {
+    background-color: #c3a11b;
+}
+
+.yellow:active {
+    opacity: 0.5;
+}
+
+.red {
+    background-color: #ff3f34;
+    grid-area: red;
+    border-top-right-radius: 100%;
+    cursor: pointer;
+}
+
+.red:hover {
+    background-color: #bb2b24;
+}
+
+.red:active {
+    opacity: 0.5;
+}
+
+.green {
+    background-color: #05c46b;
+    grid-area: green;
+    border-top-left-radius: 100%;
+    cursor: pointer;
+}
+
+.green:hover {
+    background-color: #038046;
+}
+
+.green:active {
+    opacity: 0.5;
+}
+
+.selected {
+    opacity: 0.5;
+}
